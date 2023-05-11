@@ -7,19 +7,19 @@ toggle.addEventListener("click", () =>{
 
 // SLIDER
 
-var imagenes = [
+let imagenes = [
     "/assets/1.jpg",
     "/assets/2.jpg",
     "/assets/3.jpg",
 ];
 document.Imagen.src = imagenes[0];
 
-var sliderDerecha = document.querySelector(".slider-derecha");
-var sliderIzquierda = document.querySelector(".slider-izquierda");
+let sliderDerecha = document.querySelector(".slider-derecha");
+let sliderIzquierda = document.querySelector(".slider-izquierda");
 
 sliderDerecha.addEventListener("click", moverDerecha);
 
-var contador = 0;
+let contador = 0;
 
 function moverDerecha(){
     contador++;
@@ -29,7 +29,7 @@ function moverDerecha(){
     }
     document.Imagen.src = imagenes[contador];
 }
-var intervalo = setInterval(moverDerecha, 2000);
+let intervalo = setInterval(moverDerecha, 2000);
 sliderDerecha.addEventListener("click", function(){
     clearInterval(intervalo);
     moverDerecha();
@@ -53,7 +53,7 @@ sliderIzquierda.addEventListener("click", function(){
 // observador
 
 const imagen1 = document.getElementById('logo');
-const imagen2 = document.getElementById('img-mc');
+const imagen2 = document.querySelectorAll('#img-mc');
 
 const cargarImagen = (entradas, observador) => {
     // console.log(entradas)
@@ -73,4 +73,7 @@ const observador = new IntersectionObserver(cargarImagen, {
 });
 
 observador.observe(imagen1);
+for(let image of imagen2){
+    observador.observe(image);
+    }
 observador.observe(imagen2);
