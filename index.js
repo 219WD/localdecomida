@@ -53,11 +53,9 @@ sliderIzquierda.addEventListener("click", function(){
 // observador
 
 const imagen1 = document.getElementById('logo');
-const imagen2 = document.getElementById('img-mc');
+const imagen2 = document.querySelectorAll('#img-mc');
 
 const cargarImagen = (entradas, observador) => {
-    // console.log(entradas)
-    // console.log(observador)
 
     entradas.forEach((entrada) => {
         if(entrada.isIntersecting){
@@ -73,4 +71,6 @@ const observador = new IntersectionObserver(cargarImagen, {
 });
 
 observador.observe(imagen1);
-observador.observe(imagen2);
+for(let image of imagen2){
+    observador.observe(image);
+}
