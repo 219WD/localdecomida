@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local de Comida</title>
+    <link rel="stylesheet" href="contacto.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo"><img src="/assets/logo.png" alt="Logo"></div>
+            <button class="toggle"><i class="fa-solid fa-bars"></i></button>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a href="/index.html" class="nav-menu-link">Inicio</a></li>
+                <li class="nav-menu-item"><a href="#" class="nav-menu-link">Menu</a></li>
+                <li class="nav-menu-item"><a href="/pages/nosotros.html" class="nav-menu-link">Nosotros</a></li>
+                <li class="nav-menu-item"><a href="/pages/contacto.html" class="nav-menu-link">Contacto</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section class="contact">
+        <div class="contact-container">
+            <div class="img"><img src="/assets/logo.png" alt=""></div>
+            <div class="form">
+                <h2>Contacto</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="text"></ion-icon></span>
+                        <label>Nombre y Apellido</label>
+                        <input type="text" required minlength="8">
+                    </div>
+    
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <label>Email</label>
+                        <input type="email" required>
+                    </div>
+    
+                    <div class="input-box">
+                        <textarea required name="message" id="message" rows="6" minlength="8"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-vm">Enviar</button>
+    
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-arriba">
+                <div class="logo-ft">
+                    <img src="/assets/logo.png" alt="">
+                </div>
+
+                <div class="social">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="delivery">
+                    <ul>
+                        <li><a href="#"><img src="/assets/pedidos ta.png" alt="Imagen" width="70px"></a></li>
+                        <li><a href="#"><img src="/assets/rappi.png" alt="Imagen" width="70px"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-abajo">
+                <div class="copy">
+                    <p>© 2023 Nombre del Bar. Todos los derechos reservados. 219WebDesigner.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/b857d10764.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
